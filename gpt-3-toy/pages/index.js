@@ -2,12 +2,13 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from 'react';
 
+
 export default function Home() {
   const [data, setData] = useState( { text:'' });
   const [query, setQuery] = useState();
   const [search, setSearch] = useState();
   const [isLoading, setIsLoading] = useState(false);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       if (search) {
